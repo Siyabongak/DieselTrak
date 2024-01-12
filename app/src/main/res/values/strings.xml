@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DieselTrak</string>
+    <string name="dispense">DISPENSE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="textview">TextView</string>
+    <string name="opening_meter">Opening meter</string>
+    <string name="enter_machine_hours">Enter Machine hours</string>
+    <string name="enter_machine_code">Enter machine code</string>
+    <string name="enter_operator_name">Enter Operator name</string>
+    <string name="fuel_dispense_info">Fuel Dispense Info</string>
+    <string name="closing_meter">Closing meter</string>
+</resources>
