@@ -9,4 +9,5 @@
     <string name="enter_operator_name">Enter Operator name</string>
     <string name="fuel_dispense_info">Fuel Dispense Info</string>
     <string name="closing_meter">Closing meter</string>
+    <string name="second_screen">Welcome to the second screen</string>
 </resources>

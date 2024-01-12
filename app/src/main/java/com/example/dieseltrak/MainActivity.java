@@ -2,6 +2,7 @@ package com.example.dieseltrak;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -56,12 +57,26 @@ public class MainActivity extends AppCompatActivity {
                     int opening = Integer.parseInt(etOpen.getText().toString());
                     int closing = Integer.parseInt(etClosing.getText().toString());
 
+                    //to ensure that closing is not greater than opening
+                    if(closing > opening){
+                        int results = closing - opening;
+                        String message = "Operator Name:"+name+"\n" + "Machine Code:" +code+ "\n" + "Total Fuel Dispensed:"+results+"\n"+ "machine hours :" +hours;
 
-                    int results = closing - opening;
+                        Intent intent = new Intent(MainActivity.this,com.example.dieseltrak.Dispense.class);
+                        intent.putExtra("data",message);
+                        startActivity(intent);
+                        /*
+                        tvDisplay.setText(message);
+                        tvDisplay.setVisibility(View.VISIBLE);
 
-                    String message = "Operator Name : "+name+ "\n" + "Machine Code : " +code+ "\n" + "Total Fuel Dispensed : "+results +"\n"+ "machine hours: " +hours;
-                    tvDisplay.setText(message);
-                    tvDisplay.setVisibility(View.VISIBLE);
+                         */
+                    }else {
+                        Toast.makeText(MainActivity.this,"Invalid re-enter opening and closing meter",Toast.LENGTH_SHORT).show();
+                    }
+
+
+
+
 
                 }
 
